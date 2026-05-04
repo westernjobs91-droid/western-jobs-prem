@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
+
 export default function HireStaffPage() {
   const [form, setForm] = useState({
     name: "",

@@ -69,7 +69,7 @@ export default function ContactPage() {
                   <div className="text-[#F0C94D] mt-1">📞</div>
                   <div>
                     <div className="font-semibold">Phone</div>
-                    <div>647-632-6464</div>
+                    <div>226-697-7800</div>
                   </div>
                 </div>
                 
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   <div className="text-[#F0C94D] mt-1">✉️</div>
                   <div>
                     <div className="font-semibold">Email</div>
-                    <div>hr@westernjobs.ca</div>
+                    <div>info@westernjobs.ca</div>
                   </div>
                 </div>
                 
