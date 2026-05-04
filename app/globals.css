@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0A2540;
+  --teal: #00C9A7;
+}
+
+.hero-bg {
+  background-image: 
+    linear-gradient(rgba(10, 37, 64, 0.88), rgba(10, 37, 64, 0.82)),
+    url('https://picsum.photos/id/1018/2000/1400');
+  background-size: cover;
+  background-position: center 30%;
+  background-attachment: fixed;
+}
+
+.section-header {
+  font-size: clamp(2.8rem, 5.8vw, 3.9rem);
+  line-height: 1.02;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}
+
+.service-card {
+  transition: all 0.5s cubic-bezier(0.23, 1.0, 0.32, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-16px);
+  box-shadow: 0 30px 70px -15px rgb(10 37 64 / 0.15);
+}
+/* Premium Card Styles */
+.industry-card {
+  background: #0F2744;
+  transition: all 0.4s cubic-bezier(0.23, 1.0, 0.32, 1);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.industry-card:hover {
+  background: #162B4A;
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px -15px rgba(0, 201, 167, 0.15);
+  border-color: rgba(0, 201, 167, 0.2);
+}
+
+.industry-card i {
+  transition: transform 0.4s cubic-bezier(0.23, 1.0, 0.32, 1);
+}
+
+.industry-card:hover i {
+  transform: scale(1.15);
+}
