@@ -12,17 +12,26 @@ export default function HomeContent() {
 
   return (
     <main>
-      {/* HERO */}
-      <section className="hero-bg min-h-[92vh] flex items-center relative">
-        <div className="max-w-screen-2xl mx-auto px-8 pt-8 pb-16">
+      {/* HERO SECTION */}
+      <section className="relative min-h-[92vh] flex items-center bg-[#0A2540]">
+        {/* Subtle Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540] via-[#0F2A4A] to-[#0A2540]"></div>
+
+        <div className="relative max-w-screen-2xl mx-auto px-8 pt-8 pb-16">
           <div className="grid lg:grid-cols-12 gap-x-8 items-center">
+            
+            {/* Left Side - Text Content */}
             <div className="lg:col-span-7 max-w-3xl">
+              {/* Badge */}
               <div className="inline-flex items-center rounded-3xl bg-white/95 px-5 py-2 text-xs font-semibold tracking-[1px] text-[#0A2540] mb-8 shadow-sm">
-                <div className="flex items-center -space-x-1 mr-3">
-                  <div className="w-5 h-5 bg-emerald-500 rounded-full border-2 border-white"></div>
-                  <div className="w-5 h-5 bg-[#00C9A7] rounded-full border-2 border-white"></div>
+                <div className="flex items-center gap-x-3">
+                  <div className="flex items-center gap-x-1.5">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                    <span>98.4% RETENTION RATE</span>
+                  </div>
+                  <div className="text-slate-300">|</div>
+                  <span>4,800+ PLACEMENTS IN 2025</span>
                 </div>
-               <span>98.4% CLIENT RETENTION • 1,000+ PLACEMENTS IN 2024/25</span>
               </div>
               
               <h1 className="text-white text-[68px] lg:text-[78px] leading-[0.98] font-semibold tracking-[-0.045em] mb-6">
@@ -53,7 +62,7 @@ export default function HomeContent() {
               </div>
             </div>
 
-            {/* Stats Box */}
+            {/* Right Side - Stats Box */}
             <div className="lg:col-span-5 mt-16 lg:mt-0">
               <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20">
                 <div className="grid grid-cols-2 gap-6 text-center">
@@ -76,23 +85,25 @@ export default function HomeContent() {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
-{/* TRUST BAR - Better Version */}
-<div className="bg-white border-b border-slate-100 py-6">
-  <div className="max-w-screen-2xl mx-auto px-8">
-    <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
-      <div className="font-semibold text-slate-700">98.4% Client Retention</div>
-      <div className="hidden md:block text-slate-300">|</div>
-      <div className="font-semibold text-slate-700">1,000+ Placements in 2024/25</div>
-      <div className="hidden md:block text-slate-300">|</div>
-      <div className="font-semibold text-slate-700">50+ Active Clients</div>
-      <div className="hidden md:block text-slate-300">|</div>
-      <div className="font-semibold text-slate-700">48-Hour Average Fill Time</div>
-    </div>
-  </div>
-</div>
+
+      {/* TRUST BAR */}
+      <div className="bg-white border-b border-slate-100 py-6">
+        <div className="max-w-screen-2xl mx-auto px-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
+            <div className="font-semibold text-slate-700">98.4% Client Retention</div>
+            <div className="hidden md:block text-slate-300">|</div>
+            <div className="font-semibold text-slate-700">1,000+ Placements in 2024/25</div>
+            <div className="hidden md:block text-slate-300">|</div>
+            <div className="font-semibold text-slate-700">50+ Active Clients</div>
+            <div className="hidden md:block text-slate-300">|</div>
+            <div className="font-semibold text-slate-700">48-Hour Average Fill Time</div>
+          </div>
+        </div>
+      </div>
 
       {/* SERVICES */}
       <section id="services" className="max-w-screen-2xl mx-auto px-8 pt-20 pb-16">
@@ -132,55 +143,55 @@ export default function HomeContent() {
       </section>
 
       {/* SERVING ACROSS ONTARIO */}
-<section className="max-w-screen-2xl mx-auto px-8 py-20 border-t border-slate-100">
-  <div className="text-center mb-12">
-    <div className="text-xs font-bold tracking-[2px] text-emerald-600">SERVING ALL OF ONTARIO</div>
-    <h2 className="section-header mt-3">Premium staffing across the province</h2>
-    <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-      We help employers and job seekers in major cities across Ontario.
-    </p>
-  </div>
+      <section className="max-w-screen-2xl mx-auto px-8 py-20 border-t border-slate-100">
+        <div className="text-center mb-12">
+          <div className="text-xs font-bold tracking-[2px] text-emerald-600">SERVING ALL OF ONTARIO</div>
+          <h2 className="section-header mt-3">Premium staffing across the province</h2>
+          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+            We help employers and job seekers in major cities across Ontario.
+          </p>
+        </div>
 
-  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-    {[
-      { name: "Toronto", path: "/toronto" },
-      { name: "Mississauga", path: "/mississauga" },
-      { name: "Brampton", path: "/brampton" },
-      { name: "Hamilton", path: "/hamilton" },
-      { name: "Vaughan", path: "/vaughan" },
-      { name: "Oshawa", path: "/oshawa" },
-      { name: "Cambridge", path: "/cambridge" },
-      { name: "London", path: "/london" },
-      { name: "Windsor", path: "/windsor" },
-      { name: "Woodstock", path: "/woodstock" },
-    ].map((city, index) => (
-      <Link 
-        key={index} 
-        href={city.path}
-        className="group flex items-center justify-between bg-white border border-slate-200 rounded-2xl px-6 py-4 hover:border-[#00C9A7] hover:shadow-sm transition-all"
-      >
-        <span className="font-semibold text-lg group-hover:text-[#00C9A7] transition-colors">{city.name}</span>
-        <i className="fa-solid fa-arrow-right text-slate-400 group-hover:text-[#00C9A7] transition-colors"></i>
-      </Link>
-    ))}
-  </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {[
+            { name: "Toronto", path: "/toronto" },
+            { name: "Mississauga", path: "/mississauga" },
+            { name: "Brampton", path: "/brampton" },
+            { name: "Hamilton", path: "/hamilton" },
+            { name: "Vaughan", path: "/vaughan" },
+            { name: "Oshawa", path: "/oshawa" },
+            { name: "Cambridge", path: "/cambridge" },
+            { name: "London", path: "/london" },
+            { name: "Windsor", path: "/windsor" },
+            { name: "Woodstock", path: "/woodstock" },
+          ].map((city, index) => (
+            <Link 
+              key={index} 
+              href={city.path}
+              className="group flex items-center justify-between bg-white border border-slate-200 rounded-2xl px-6 py-4 hover:border-[#00C9A7] hover:shadow-sm transition-all"
+            >
+              <span className="font-semibold text-lg group-hover:text-[#00C9A7] transition-colors">{city.name}</span>
+              <i className="fa-solid fa-arrow-right text-slate-400 group-hover:text-[#00C9A7] transition-colors"></i>
+            </Link>
+          ))}
+        </div>
 
-  <div className="text-center mt-8">
-    <Link 
-      href="/locations" 
-      className="inline-flex items-center gap-x-2 text-[#00C9A7] font-semibold hover:underline"
-    >
-      View all locations across Ontario →
-    </Link>
-  </div>
-</section>
+        <div className="text-center mt-8">
+          <Link 
+            href="/locations" 
+            className="inline-flex items-center gap-x-2 text-[#00C9A7] font-semibold hover:underline"
+          >
+            View all locations across Ontario →
+          </Link>
+        </div>
+      </section>
 
       {/* STATS BAR */}
       <div className="bg-[#0A2540] py-8">
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 text-center text-white">
             <div>
-              <AnimatedCounter end={4872} />
+              <AnimatedCounter end={1000} />
               <div className="text-sm text-white/60 -mt-1">Placements in 2025</div>
             </div>
             <div>
@@ -213,7 +224,7 @@ export default function HomeContent() {
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-x-3 text-slate-600">
                 <div className="text-emerald-500">✓</div>
-                <span>Access to 85,000+ pre-screened candidates</span>
+                <span>Access to 10,000+ pre-screened candidates</span>
               </div>
               <div className="flex items-center gap-x-3 text-slate-600">
                 <div className="text-emerald-500">✓</div>
