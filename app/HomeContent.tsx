@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import AnimatedCounter from '@/components/AnimatedCounter'
 import { useModal } from '@/app/context/ModalContext'
+import Link from 'next/link'
 
 export default function HomeContent() {
   const [showJobModal, setShowJobModal] = useState(false)
@@ -128,6 +129,50 @@ export default function HomeContent() {
           ))}
         </div>
       </section>
+
+      {/* SERVING ACROSS ONTARIO */}
+<section className="max-w-screen-2xl mx-auto px-8 py-20 border-t border-slate-100">
+  <div className="text-center mb-12">
+    <div className="text-xs font-bold tracking-[2px] text-emerald-600">SERVING ALL OF ONTARIO</div>
+    <h2 className="section-header mt-3">Premium staffing across the province</h2>
+    <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+      We help employers and job seekers in major cities across Ontario.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    {[
+      { name: "Toronto", path: "/toronto" },
+      { name: "Mississauga", path: "/mississauga" },
+      { name: "Brampton", path: "/brampton" },
+      { name: "Hamilton", path: "/hamilton" },
+      { name: "Vaughan", path: "/vaughan" },
+      { name: "Oshawa", path: "/oshawa" },
+      { name: "Cambridge", path: "/cambridge" },
+      { name: "London", path: "/london" },
+      { name: "Windsor", path: "/windsor" },
+      { name: "Woodstock", path: "/woodstock" },
+    ].map((city, index) => (
+      <Link 
+        key={index} 
+        href={city.path}
+        className="group flex items-center justify-between bg-white border border-slate-200 rounded-2xl px-6 py-4 hover:border-[#00C9A7] hover:shadow-sm transition-all"
+      >
+        <span className="font-semibold text-lg group-hover:text-[#00C9A7] transition-colors">{city.name}</span>
+        <i className="fa-solid fa-arrow-right text-slate-400 group-hover:text-[#00C9A7] transition-colors"></i>
+      </Link>
+    ))}
+  </div>
+
+  <div className="text-center mt-8">
+    <Link 
+      href="/locations" 
+      className="inline-flex items-center gap-x-2 text-[#00C9A7] font-semibold hover:underline"
+    >
+      View all locations across Ontario →
+    </Link>
+  </div>
+</section>
 
       {/* STATS BAR */}
       <div className="bg-[#0A2540] py-8">
@@ -261,7 +306,7 @@ export default function HomeContent() {
                 </button>
               </div>
               
-              <div className="mt-6 text-center text-xs text-white/50">Or call us directly at <a href="tel:6476326464" className="font-semibold text-white hover:text-[#00C9A7]">647-632-6464</a></div>
+              <div className="mt-6 text-center text-xs text-white/50">Or call us directly at <a href="tel:2266977800" className="font-semibold text-white hover:text-[#00C9A7]">226-697-7800</a></div>
             </div>
           </div>
         </div>

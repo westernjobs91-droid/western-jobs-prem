@@ -1,5 +1,5 @@
 'use client'
-
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useModal } from '@/app/context/ModalContext'
 
@@ -131,6 +131,49 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+
+      // Add this section before the final CTA section
+
+{/* SERVING ACROSS ONTARIO */}
+<section className="max-w-screen-2xl mx-auto px-8 py-16 border-t border-slate-100">
+  <div className="text-center mb-10">
+    <div className="text-xs font-bold tracking-[2px] text-emerald-600">SERVING ALL OF ONTARIO</div>
+    <h2 className="section-header mt-3">Premium staffing across the province</h2>
+  </div>
+
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    {[
+      { name: "Toronto", path: "/toronto" },
+      { name: "Mississauga", path: "/mississauga" },
+      { name: "Brampton", path: "/brampton" },
+      { name: "Hamilton", path: "/hamilton" },
+      { name: "Vaughan", path: "/vaughan" },
+      { name: "Oshawa", path: "/oshawa" },
+      { name: "Cambridge", path: "/cambridge" },
+      { name: "London", path: "/london" },
+      { name: "Windsor", path: "/windsor" },
+      { name: "Woodstock", path: "/woodstock" },
+    ].map((city, index) => (
+      <Link 
+        key={index} 
+        href={city.path}
+        className="group flex items-center justify-between bg-white border border-slate-200 rounded-2xl px-6 py-4 hover:border-[#00C9A7] hover:shadow-sm transition-all"
+      >
+        <span className="font-semibold text-lg group-hover:text-[#00C9A7] transition-colors">{city.name}</span>
+        <i className="fa-solid fa-arrow-right text-slate-400 group-hover:text-[#00C9A7] transition-colors"></i>
+      </Link>
+    ))}
+  </div>
+
+  <div className="text-center mt-8">
+    <Link 
+      href="/locations" 
+      className="inline-flex items-center gap-x-2 text-[#00C9A7] font-semibold hover:underline"
+    >
+      View all locations across Ontario →
+    </Link>
+  </div>
+</section>
 
       {/* FINAL CTA */}
       <section className="bg-[#0A2540] py-20 text-white text-center">
