@@ -1,11 +1,10 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useModal } from '@/app/context/ModalContext'
 
 export default function EmployersPage() {
-  const [showContactModal, setShowContactModal] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { openContact } = useModal()
 
   const employerPoints = [
     "Temporary, permanent, temp-to-perm, and contract staffing support",
@@ -17,68 +16,36 @@ export default function EmployersPage() {
   const process = [
     {
       title: "Understand the Role",
-      text: "We begin by learning about your hiring needs, timelines, expectations, and the type of candidate you are seeking.",
+      text: "We begin by learning about your hiring needs, timelines, expectations, and the type of candidate you are seeking across Toronto, Mississauga, Brampton and the GTA.",
     },
     {
       title: "Source & Review Candidates",
-      text: "We identify candidates and review experience, fit, and readiness to support a more efficient hiring process.",
+      text: "We identify candidates and review experience, fit, and readiness to support a more efficient hiring process for employers in Ontario.",
     },
     {
       title: "Coordinate Next Steps",
-      text: "We support communication, interviews, and placement coordination to help keep the process moving clearly.",
+      text: "We support communication, interviews, and placement coordination to help keep the process moving clearly and professionally.",
     },
   ]
 
   const whyItHelps = [
     {
       title: "Temporary Staffing",
-      text: "Helps employers cover short-term gaps, seasonal demand, and urgent staffing needs with more flexibility.",
+      text: "Helps employers across Toronto, Mississauga, Brampton, Vaughan and the GTA cover short-term gaps, seasonal demand, and urgent staffing needs with more flexibility.",
     },
     {
       title: "Permanent Staffing",
-      text: "Supports businesses looking to build stronger, long-term teams with candidates aligned to role needs.",
+      text: "Supports businesses looking to build stronger, long-term teams with candidates aligned to role needs and company culture across Ontario.",
     },
     {
       title: "Temp-to-Perm",
-      text: "Gives employers the opportunity to evaluate candidates on the job before making a permanent hiring decision.",
+      text: "Gives employers the opportunity to evaluate candidates on the job before making a permanent hiring decision — reducing risk across the GTA.",
     },
     {
       title: "Contract Staffing",
-      text: "Provides support for project-based work, fixed-term roles, and specialized short-term business requirements.",
+      text: "Provides support for project-based work, fixed-term roles, and specialized short-term business requirements across Ontario.",
     },
   ]
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    const form = e.target as HTMLFormElement
-    const formData = new FormData(form)
-
-    const name = `${formData.get('firstName')} ${formData.get('lastName')}`
-    const email = formData.get('email') as string
-    const message = formData.get('message') as string
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message, type: 'employer' })
-      })
-
-      if (response.ok) {
-        alert("Thank you! We'll contact you within 24 hours.")
-        setShowContactModal(false)
-        form.reset()
-      } else {
-        alert("Something went wrong. Please try again.")
-      }
-    } catch (error) {
-      alert("Something went wrong. Please try again.")
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   return (
     <main className="pt-20">
@@ -87,8 +54,12 @@ export default function EmployersPage() {
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="max-w-4xl">
             <div className="text-xs font-bold tracking-[2px] text-[#00C9A7]">FOR EMPLOYERS</div>
-            <h1 className="section-header mt-3 text-white">Staffing support designed to help businesses hire with more confidence</h1>
-            <p className="mt-6 text-xl text-white/80 max-w-3xl">Western Jobs supports employers with flexible recruitment solutions, professional communication, and practical staffing support for changing workforce needs.</p>
+            <h1 className="section-header mt-3 text-white">
+              Staffing support designed to help businesses hire with more confidence
+            </h1>
+            <p className="mt-6 text-xl text-white/80 max-w-3xl">
+              Western Jobs supports employers across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor and the GTA with flexible recruitment solutions and professional staffing support.
+            </p>
           </div>
         </div>
       </section>
@@ -114,7 +85,9 @@ export default function EmployersPage() {
             <div className="bg-white border border-slate-200 rounded-3xl p-10 shadow-xl">
               <div className="text-xs font-bold tracking-[2px] text-[#C99700]">READY TO HIRE?</div>
               <h3 className="mt-4 text-3xl font-bold">Get staffing support fast</h3>
-              <p className="mt-4 text-lg text-slate-600">Tell us what you need and we'll help you move forward with flexible staffing solutions tailored to your business.</p>
+              <p className="mt-4 text-lg text-slate-600">
+                Tell us what you need and we’ll help you move forward with flexible staffing solutions tailored to your business across Ontario.
+              </p>
               
               <button 
                 onClick={() => window.location.href = '/hire-staff'}
@@ -163,7 +136,9 @@ export default function EmployersPage() {
         <div className="text-center mb-16">
           <div className="text-xs font-bold tracking-[2px] text-emerald-600">FLEXIBLE HIRING MODELS</div>
           <h2 className="section-header mt-3">Different staffing needs call for different solutions</h2>
-          <p className="mt-4 text-xl text-slate-600 max-w-2xl mx-auto">Western Jobs supports multiple hiring models so employers can choose a staffing approach that fits their business reality.</p>
+          <p className="mt-4 text-xl text-slate-600 max-w-2xl mx-auto">
+            Western Jobs supports multiple hiring models so employers across Ontario can choose a staffing approach that fits their business reality.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -185,7 +160,9 @@ export default function EmployersPage() {
         <div className="max-w-3xl mx-auto px-8">
           <div className="text-xs font-bold tracking-[2px] text-[#F0C94D]">NEED STAFFING SUPPORT?</div>
           <h2 className="mt-4 text-5xl font-bold tracking-tighter">Hire the right staff — without delays or guesswork</h2>
-          <p className="mt-6 text-xl text-white/70">Tell us what you need and get support with temporary, permanent, and contract staffing tailored to your business.</p>
+          <p className="mt-6 text-xl text-white/70">
+            Tell us what you need and get support with temporary, permanent, and contract staffing tailored to your business across Toronto and the GTA.
+          </p>
           
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <button 
@@ -195,7 +172,7 @@ export default function EmployersPage() {
               Hire Staff Now
             </button>
             <button 
-              onClick={() => setShowContactModal(true)}
+              onClick={openContact}
               className="px-10 py-4 border border-white/30 hover:bg-white/10 text-white font-semibold rounded-3xl text-sm transition-all"
             >
               Book Consultation
@@ -203,61 +180,6 @@ export default function EmployersPage() {
           </div>
         </div>
       </section>
-
-      {/* CONTACT MODAL */}
-      {showContactModal && (
-        <div className="fixed inset-0 bg-black/70 z-[999] flex items-center justify-center p-6" onClick={() => setShowContactModal(false)}>
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-2xl overflow-hidden" onClick={e => e.stopPropagation()}>
-            <div className="px-8 pt-8 pb-5">
-              <div className="flex justify-between">
-                <div>
-                  <div className="font-semibold text-3xl tracking-tight">Let's find your next hire</div>
-                  <div className="text-sm text-slate-500 mt-1">Tell us about your staffing needs</div>
-                </div>
-                <button onClick={() => setShowContactModal(false)} className="text-slate-300 hover:text-slate-500">
-                  <i className="fa-solid fa-times text-3xl"></i>
-                </button>
-              </div>
-              
-              <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-500 mb-1.5">FIRST NAME</label>
-                    <input type="text" name="firstName" required className="w-full border border-slate-300 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-[#00C9A7]" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-500 mb-1.5">LAST NAME</label>
-                    <input type="text" name="lastName" required className="w-full border border-slate-300 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-[#00C9A7]" />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-xs font-semibold text-slate-500 mb-1.5">EMAIL ADDRESS</label>
-                  <input type="email" name="email" required className="w-full border border-slate-300 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-[#00C9A7]" />
-                </div>
-                
-                <div>
-                  <label className="block text-xs font-semibold text-slate-500 mb-1.5">COMPANY NAME</label>
-                  <input type="text" name="company" className="w-full border border-slate-300 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-[#00C9A7]" />
-                </div>
-                
-                <div>
-                  <label className="block text-xs font-semibold text-slate-500 mb-1.5">HOW CAN WE HELP?</label>
-                  <textarea name="message" rows={4} required className="w-full border border-slate-300 rounded-3xl px-4 py-3 text-sm focus:outline-none focus:border-[#00C9A7]" placeholder="What roles are you looking to fill?"></textarea>
-                </div>
-                
-                <button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="w-full bg-[#0A2540] hover:bg-black transition-all text-white font-semibold py-[17px] rounded-3xl text-sm mt-2 disabled:opacity-70"
-                >
-                  {isSubmitting ? "Sending..." : "Submit Request"}
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      )}
     </main>
   )
 }
