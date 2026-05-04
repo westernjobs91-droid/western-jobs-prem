@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-screen-2xl mx-auto px-8">
         <div className="grid md:grid-cols-12 gap-y-14">
           
-          {/* Logo + About */}
+        {/* Logo + About */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-x-3">
               <img 
@@ -37,42 +37,55 @@ export default function Footer() {
           {/* Company */}
           <div className="md:col-span-2">
             <div className="font-semibold text-white text-xs tracking-widest mb-4">COMPANY</div>
-            <div className="space-y-[13px] text-sm">
+            <div className="space-y-[13px]">
               <Link href="/about" className="block hover:text-white">About Us</Link>
-              <Link href="/contact" className="block hover:text-white">Contact</Link>
-              <a href="#" className="block hover:text-white">Careers</a>
+              <Link href="/how-we-work" className="block hover:text-white">How We Work</Link>
+              <Link href="/industries" className="block hover:text-white">Industries</Link>
+              <Link href="/locations" className="block hover:text-white">All Locations</Link>
             </div>
           </div>
 
-          {/* Resources */}
+          {/* For Employers */}
           <div className="md:col-span-2">
-            <div className="font-semibold text-white text-xs tracking-widest mb-4">RESOURCES</div>
-            <div className="space-y-[13px] text-sm">
-              <a href="#" className="block hover:text-white">Blog</a>
-              <a href="#" className="block hover:text-white">Hiring Guides</a>
-              <a href="#" className="block hover:text-white">Salary Reports</a>
+            <div className="font-semibold text-white text-xs tracking-widest mb-4">FOR EMPLOYERS</div>
+            <div className="space-y-[13px]">
+              <Link href="/employers" className="block hover:text-white">Hire Staff</Link>
+              <Link href="/hire-staff" className="block hover:text-white">Request Staffing</Link>
+              <Link href="/services" className="block hover:text-white">Our Services</Link>
             </div>
           </div>
 
-          {/* Contact */}
-          <div className="md:col-span-4">
-            <div className="font-semibold text-white text-xs tracking-widest mb-4">CONTACT US</div>
-            
-            <div className="space-y-3 text-sm">
-              <div>
-                <span className="font-medium text-white">Toronto / Mississauga:</span><br />
-                6660 Kennedy Rd, Suite 201, Mississauga ON L5T 2M9
+          {/* For Job Seekers */}
+          <div className="md:col-span-2">
+            <div className="font-semibold text-white text-xs tracking-widest mb-4">FOR JOB SEEKERS</div>
+            <div className="space-y-[13px]">
+              <Link href="/job-seekers" className="block hover:text-white">Find Work</Link>
+              <Link href="/apply" className="block hover:text-white">Apply Now</Link>
+              <Link href="/contact" className="block hover:text-white">Contact Us</Link>
+            </div>
+          </div>
+
+          {/* Locations */}
+          <div className="md:col-span-2">
+            <div className="font-semibold text-white text-xs tracking-widest mb-4">LOCATIONS</div>
+            <div className="grid grid-cols-2 gap-x-4 text-sm">
+              <div className="space-y-[10px]">
+                <Link href="/toronto" className="block hover:text-white">Toronto</Link>
+                <Link href="/mississauga" className="block hover:text-white">Mississauga</Link>
+                <Link href="/brampton" className="block hover:text-white">Brampton</Link>
+                <Link href="/hamilton" className="block hover:text-white">Hamilton</Link>
+                <Link href="/vaughan" className="block hover:text-white">Vaughan</Link>
               </div>
-              <div>
-                <span className="font-medium text-white">Phone:</span> <a href="tel:6476326464" className="hover:text-white">226-697-7800</a>
-              </div>
-              <div>
-                <span className="font-medium text-white">Email:</span> <a href="mailto:hr@westernjobs.ca" className="hover:text-white">hr@westernjobs.ca</a>
+              <div className="space-y-[10px]">
+                <Link href="/oshawa" className="block hover:text-white">Oshawa</Link>
+                <Link href="/cambridge" className="block hover:text-white">Cambridge</Link>
+                <Link href="/london" className="block hover:text-white">London</Link>
+                <Link href="/windsor" className="block hover:text-white">Windsor</Link>
+                <Link href="/locations" className="block text-[#00C9A7] hover:text-white">View All →</Link>
               </div>
             </div>
-            
-            <div className="mt-6 text-xs">We typically respond within one business day.</div>
           </div>
+
         </div>
 
         {/* Bottom Bar */}
