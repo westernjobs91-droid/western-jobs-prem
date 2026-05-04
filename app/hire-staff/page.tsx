@@ -1,8 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-
 
 export default function HireStaffPage() {
   const [form, setForm] = useState({
@@ -52,11 +50,15 @@ export default function HireStaffPage() {
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm mb-6">
-              ⏰ Hiring support for urgent and ongoing staffing needs
+              ⏰ Hiring support for urgent and ongoing staffing needs across Ontario
             </div>
             
-            <h1 className="text-6xl font-bold tracking-tighter">Hire Staff Faster<br />With Western Jobs</h1>
-            <p className="mt-6 text-xl text-white/80 max-w-2xl">Tell us what you need, and we'll help you explore temporary, permanent, temp-to-perm, and contract staffing solutions built around your business.</p>
+            <h1 className="text-6xl font-bold tracking-tighter">
+              Hire Staff Faster<br />With Western Jobs
+            </h1>
+            <p className="mt-6 text-xl text-white/80 max-w-2xl">
+              Tell us what you need, and we'll help you explore temporary, permanent, temp-to-perm, and contract staffing solutions across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor and the GTA.
+            </p>
           </div>
         </div>
       </section>
@@ -72,10 +74,10 @@ export default function HireStaffPage() {
               
               <div className="mt-8 space-y-4">
                 {[
-                  "Responsive support for urgent staffing needs",
+                  "Responsive support for urgent staffing needs across the GTA",
                   "Flexible hiring options for changing workforce demands",
                   "Professional communication throughout the process",
-                  "Support for temporary, permanent, and contract roles",
+                  "Support for temporary, permanent, and contract roles in Ontario",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-x-4">
                     <div className="mt-1 text-[#00C9A7]">✓</div>
@@ -88,7 +90,7 @@ export default function HireStaffPage() {
                 <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8">
                   <div className="text-[#C99700] text-3xl mb-4">⚡</div>
                   <div className="font-bold text-xl">Flexible</div>
-                  <p className="mt-2 text-slate-600">Staffing models that fit your business.</p>
+                  <p className="mt-2 text-slate-600">Staffing models that fit your business across Ontario.</p>
                 </div>
                 
                 <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8">
@@ -162,7 +164,7 @@ export default function HireStaffPage() {
                 <div>
                   <label className="block text-xs font-semibold text-slate-500 mb-2">WHAT TYPE OF STAFF DO YOU NEED?</label>
                   <textarea 
-                    placeholder="e.g., 5 warehouse associates for seasonal peak, 2 production supervisors, temp-to-perm forklift operators..."
+                    placeholder="e.g., 5 warehouse associates for seasonal peak in Mississauga, 2 production supervisors in Hamilton, temp-to-perm forklift operators in Brampton..."
                     rows={6}
                     value={form.hiringNeed}
                     onChange={(e) => setForm({ ...form, hiringNeed: e.target.value })}
@@ -196,7 +198,9 @@ export default function HireStaffPage() {
       <section className="bg-[#0A2540] py-20 text-white text-center">
         <div className="max-w-3xl mx-auto px-8">
           <h2 className="text-5xl font-bold tracking-tighter">Ready to hire with confidence?</h2>
-          <p className="mt-6 text-xl text-white/70">Let's discuss your staffing needs and find the right solution for your business.</p>
+          <p className="mt-6 text-xl text-white/70">
+            Let's discuss your staffing needs and find the right solution for your business across Toronto and the GTA.
+          </p>
           
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
