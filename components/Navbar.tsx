@@ -39,19 +39,19 @@ export default function Navbar() {
 
   return (
     <>
-      {/* TOP BAR */}
-      <div className="bg-[#0A2540] text-white text-sm py-3">
-        <div className="max-w-screen-2xl mx-auto px-8 flex items-center justify-between">
-          <div className="flex items-center gap-x-8">
-            <div className="flex items-center gap-x-2">
-              <i className="fa-solid fa-globe text-[#00C9A7]"></i>
-              <span>Serving all of Ontario</span>
-            </div>
-            <div className="hidden md:block">|</div>
-            <div className="hidden md:block">24/7 Emergency Staffing Available</div>
-          </div>
-        </div>
+     {/* TOP BAR */}
+<div className="bg-[#0A2540] text-white/90 text-xs py-2.5 hidden md:block">
+  <div className="max-w-screen-2xl mx-auto px-8 flex justify-center md:justify-start">
+    <div className="flex items-center gap-x-6">
+      <div className="flex items-center gap-x-2">
+        <i className="fa-solid fa-globe text-[#00C9A7]"></i>
+        <span className="font-medium">Serving all of Ontario</span>
       </div>
+      <div className="text-white/50">|</div>
+      <div className="font-medium">24/7 Emergency Staffing Available</div>
+    </div>
+  </div>
+</div>
 
       {/* MAIN NAV */}
       <nav className="bg-white border-b border-slate-100 sticky top-0 z-50">
