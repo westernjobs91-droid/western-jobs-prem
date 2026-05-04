@@ -58,7 +58,7 @@ export default function HomeContent() {
               <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <div className="text-5xl font-semibold text-[#0A2540]">240+</div>
+                    <div className="text-5xl font-semibold text-[#0A2540]">50+</div>
                     <div className="text-sm text-slate-500 mt-1">Active Clients</div>
                   </div>
                   <div>

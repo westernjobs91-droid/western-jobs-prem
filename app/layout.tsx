@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   description: "Ontario's trusted premium staffing agency. Fast temporary, permanent, and contract staffing solutions across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor, Kitchener and the GTA. Pre-vetted talent. 48-hour average fill time. 98.4% retention rate.",
   
-  icons: {
-    icon: "/logo.png",
+icons: {
+    icon: '/favicon.ico',
   },
 
   verification: {
