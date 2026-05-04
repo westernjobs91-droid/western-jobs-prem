@@ -21,20 +21,44 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Western Jobs | Premium Staffing & Recruitment Agency in Ontario",
+    default: "Western Jobs | Premium Staffing & Recruitment Agency | Toronto, GTA & Ontario",
     template: "%s | Western Jobs",
   },
-  description: "Expert temporary, permanent, and contract staffing solutions across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor, Kitchener and the GTA. Fast and reliable hiring support for employers and job seekers across Ontario.",
+  description: "Ontario's trusted premium staffing agency. Fast temporary, permanent, and contract staffing solutions across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor, Kitchener and the GTA. Pre-vetted talent. 48-hour average fill time. 98.4% retention rate.",
+  
   icons: {
     icon: "/logo.png",
   },
+
   verification: {
-    google: 'google882b2e61a265dec5',     // ← Corrected Google Verification
+    google: 'google882b2e61a265dec5',
   },
+
   openGraph: {
     title: "Western Jobs | Premium Staffing & Recruitment Agency in Ontario",
-    description: "Expert temporary, permanent, and contract staffing solutions across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor and the GTA.",
-    images: [{ url: "/logo.png" }],
+    description: "Expert temporary, permanent, and contract staffing solutions. Fast hiring support for employers and job seekers across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor and the GTA.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Western Jobs - Premium Staffing Agency Ontario",
+      },
+    ],
+    locale: "en_CA",
+    type: "website",
+    siteName: "Western Jobs",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Western Jobs | Premium Staffing Agency | Toronto & GTA",
+    description: "Fast, reliable temporary, permanent & contract staffing across Ontario. 48-hour average fill time. Trusted by employers across the GTA.",
+    images: ["/logo.png"],
+  },
+
+  alternates: {
+    canonical: "https://westernjobs.ca",
   },
 }
 
