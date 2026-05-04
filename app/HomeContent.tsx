@@ -53,12 +53,12 @@ export default function HomeContent() {
                   <i className="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
                 </button>
                 
-                <button 
-                  onClick={() => setShowJobModal(true)}
-                  className="group flex items-center justify-center gap-x-3 px-8 py-[18px] border border-white/40 text-white hover:bg-white/10 font-semibold rounded-3xl text-base transition-all"
-                >
-                  <span>Browse Open Roles</span>
-                </button>
+               <button 
+            onClick={() => window.location.href = '/apply'}
+            className="group flex items-center justify-center gap-x-3 px-8 py-[18px] border border-white/40 text-white hover:bg-white/10 font-semibold rounded-3xl text-base transition-all"
+          >
+            <span>Browse Open Roles</span>
+          </button>
               </div>
             </div>
 
