@@ -6,7 +6,25 @@ import { useModal } from '@/app/context/ModalContext'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [locationsOpen, setLocationsOpen] = useState(false)
   const { openContact } = useModal()
+
+  const locations = [
+    { name: "Toronto", path: "/toronto" },
+    { name: "Mississauga", path: "/mississauga" },
+    { name: "Brampton", path: "/brampton" },
+    { name: "Hamilton", path: "/hamilton" },
+    { name: "Vaughan", path: "/vaughan" },
+    { name: "Oshawa", path: "/oshawa" },
+    { name: "Cambridge", path: "/cambridge" },
+    { name: "London", path: "/london" },
+    { name: "Windsor", path: "/windsor" },
+    { name: "Woodstock", path: "/woodstock" },
+    { name: "St. Thomas", path: "/st-thomas" },
+    { name: "Tilsonburg", path: "/tilsonburg" },
+    { name: "Ingersoll", path: "/ingersoll" },
+    { name: "Alliston", path: "/alliston" },
+  ]
 
   return (
     <>
@@ -29,7 +47,7 @@ export default function Navbar() {
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="flex items-center justify-between h-20">
             
-          {/* Logo */}
+                    {/* Logo */}
 <Link href="/" className="flex items-center gap-x-3.5">
   <img 
     src="/logo.png" 
@@ -52,13 +70,47 @@ export default function Navbar() {
               <Link href="/services" className="hover:text-[#00C9A7] transition-colors">Services</Link>
               <Link href="/employers" className="hover:text-[#00C9A7] transition-colors">For Employers</Link>
               <Link href="/job-seekers" className="hover:text-[#00C9A7] transition-colors">For Job Seekers</Link>
-              <Link href="/industries" className="hover:text-[#00C9A7] transition-colors">Industries</Link>
               <Link href="/how-we-work" className="hover:text-[#00C9A7] transition-colors">How We Work</Link>
+
+              {/* Locations Dropdown */}
+              <div className="relative group">
+                <button 
+                  onClick={() => setLocationsOpen(!locationsOpen)}
+                  className="flex items-center gap-x-1 hover:text-[#00C9A7] transition-colors"
+                >
+                  Locations <i className="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+
+                {/* Dropdown Menu */}
+                {locationsOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-slate-200 rounded-2xl shadow-xl py-2 z-50">
+                    <div className="grid grid-cols-1">
+                      {locations.map((loc, index) => (
+                        <Link 
+                          key={index} 
+                          href={loc.path} 
+                          className="px-5 py-2.5 text-sm hover:bg-slate-50 transition-colors"
+                          onClick={() => setLocationsOpen(false)}
+                        >
+                          {loc.name}
+                        </Link>
+                      ))}
+                      <div className="border-t my-1"></div>
+                      <Link 
+                        href="/locations" 
+                        className="px-5 py-2.5 text-sm font-semibold text-[#00C9A7] hover:bg-slate-50"
+                        onClick={() => setLocationsOpen(false)}
+                      >
+                        View All Locations →
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Right Side Buttons */}
             <div className="hidden md:flex items-center gap-x-4">
-              {/* Search */}
               <div className="relative w-56">
                 <input type="text" placeholder="Search Jobs" className="w-full border border-slate-300 rounded-3xl pl-10 py-2 text-sm focus:outline-none focus:border-[#00C9A7]" />
                 <span className="absolute left-4 top-2.5 text-slate-400">🔍</span>
@@ -66,19 +118,10 @@ export default function Navbar() {
 
               <a href="tel:2266977800" className="flex items-center gap-x-2 text-sm font-medium hover:text-[#00C9A7]">📞 226-697-7800</a>
 
-              {/* Post a Job → Goes to dedicated page */}
-              <Link 
-                href="/hire-staff"
-                className="px-7 py-2.5 bg-[#0A2540] text-white text-sm font-semibold rounded-3xl hover:bg-black transition-all"
-              >
+              <Link href="/hire-staff" className="px-7 py-2.5 bg-[#0A2540] text-white text-sm font-semibold rounded-3xl hover:bg-black transition-all">
                 Post a Job
               </Link>
-
-              {/* Find Work → Goes to dedicated page */}
-              <Link 
-                href="/apply"
-                className="px-7 py-2.5 border border-slate-300 text-sm font-semibold rounded-3xl hover:bg-slate-50 transition-all"
-              >
+              <Link href="/apply" className="px-7 py-2.5 border border-slate-300 text-sm font-semibold rounded-3xl hover:bg-slate-50 transition-all">
                 Find Work
               </Link>
             </div>
@@ -95,8 +138,8 @@ export default function Navbar() {
                 <Link href="/services">Services</Link>
                 <Link href="/employers">For Employers</Link>
                 <Link href="/job-seekers">For Job Seekers</Link>
-                <Link href="/industries">Industries</Link>
                 <Link href="/how-we-work">How We Work</Link>
+                <Link href="/locations">All Locations</Link>
 
                 <div className="pt-4 border-t flex flex-col gap-y-3">
                   <Link href="/hire-staff" className="px-6 py-3 text-center font-semibold bg-[#0A2540] text-white rounded-3xl">Post a Job</Link>

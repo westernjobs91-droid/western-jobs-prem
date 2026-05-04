@@ -20,6 +20,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://westernjobs.ca'),
   title: {
     default: "Western Jobs | Premium Staffing & Recruitment Agency | Toronto, GTA & Ontario",
     template: "%s | Western Jobs",
