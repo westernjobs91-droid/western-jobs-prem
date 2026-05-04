@@ -22,7 +22,7 @@ export default function HomeContent() {
                   <div className="w-5 h-5 bg-emerald-500 rounded-full border-2 border-white"></div>
                   <div className="w-5 h-5 bg-[#00C9A7] rounded-full border-2 border-white"></div>
                 </div>
-                <span>2025 CANADIAN STAFFING EXCELLENCE AWARD WINNER</span>
+               <span>98.4% CLIENT RETENTION • 1,000+ PLACEMENTS IN 2024/25</span>
               </div>
               
               <h1 className="text-white text-[68px] lg:text-[78px] leading-[0.98] font-semibold tracking-[-0.045em] mb-6">
@@ -79,19 +79,20 @@ export default function HomeContent() {
           </div>
         </div>
       </section>
-
-      {/* TRUST BAR */}
-      <div className="bg-white border-b border-slate-100 py-6">
-        <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-5 opacity-75">
-            <div className="font-semibold text-sm tracking-tight text-slate-400">AS FEATURED IN</div>
-            <div className="text-sm font-medium">Ontario Business Journal</div>
-            <div className="text-sm font-medium">Canadian HR Reporter</div>
-            <div className="text-sm font-medium">Globe &amp; Mail</div>
-            <div className="text-sm font-medium">Toronto Star Business</div>
-          </div>
-        </div>
-      </div>
+{/* TRUST BAR - Better Version */}
+<div className="bg-white border-b border-slate-100 py-6">
+  <div className="max-w-screen-2xl mx-auto px-8">
+    <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
+      <div className="font-semibold text-slate-700">98.4% Client Retention</div>
+      <div className="hidden md:block text-slate-300">|</div>
+      <div className="font-semibold text-slate-700">1,000+ Placements in 2024/25</div>
+      <div className="hidden md:block text-slate-300">|</div>
+      <div className="font-semibold text-slate-700">50+ Active Clients</div>
+      <div className="hidden md:block text-slate-300">|</div>
+      <div className="font-semibold text-slate-700">48-Hour Average Fill Time</div>
+    </div>
+  </div>
+</div>
 
       {/* SERVICES */}
       <section id="services" className="max-w-screen-2xl mx-auto px-8 pt-20 pb-16">

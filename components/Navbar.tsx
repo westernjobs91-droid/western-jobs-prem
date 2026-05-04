@@ -134,8 +134,8 @@ export default function Navbar() {
               </form>
 
               {/* Phone */}
-              <a href="tel:6476326464" className="flex items-center gap-x-2 text-sm font-medium hover:text-[#00C9A7] transition-colors">
-                📞 647-632-6464
+              <a href="tel:2266977800" className="flex items-center gap-x-2 text-sm font-medium hover:text-[#00C9A7] transition-colors">
+                📞 226-697-7800
               </a>
 
               {/* CTA Buttons */}
