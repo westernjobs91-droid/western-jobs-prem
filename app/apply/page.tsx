@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 
 export default function ApplyPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
@@ -52,8 +51,12 @@ export default function ApplyPage() {
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="max-w-4xl">
             <div className="text-xs font-bold tracking-[2px] text-[#00C9A7]">APPLY NOW</div>
-            <h1 className="section-header mt-3 text-white">Submit your details and resume</h1>
-            <p className="mt-6 text-xl text-white/80 max-w-3xl">Western Jobs supports candidates seeking temporary, permanent, and contract opportunities. Apply here and share your resume.</p>
+            <h1 className="section-header mt-3 text-white">
+              Submit your resume and get matched with opportunities
+            </h1>
+            <p className="mt-6 text-xl text-white/80 max-w-3xl">
+              Western Jobs connects candidates with temporary, permanent, and contract opportunities across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor and the GTA.
+            </p>
           </div>
         </div>
       </section>
@@ -69,10 +72,10 @@ export default function ApplyPage() {
               
               <div className="mt-8 space-y-4">
                 {[
-                  "Simple application process",
-                  "Resume sent directly to Western Jobs",
-                  "Opportunities based on fit and availability",
-                  "Professional communication when opportunities are available",
+                  "Simple and fast application process",
+                  "Resume sent directly to our team",
+                  "Opportunities matched to your skills and availability",
+                  "Professional communication when roles become available across Ontario",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-x-4">
                     <div className="mt-1 text-[#00C9A7]">✓</div>
@@ -85,8 +88,8 @@ export default function ApplyPage() {
                 <div className="text-sm font-bold tracking-[1px] text-slate-500 mb-4">WHAT HAPPENS NEXT?</div>
                 <div className="space-y-4 text-slate-600">
                   <div>1. We review your application and resume</div>
-                  <div>2. We match you with suitable opportunities</div>
-                  <div>3. We contact you when a good fit is found</div>
+                  <div>2. We match you with suitable opportunities across the GTA</div>
+                  <div>3. We contact you when a good fit becomes available</div>
                 </div>
               </div>
             </div>
@@ -134,7 +137,7 @@ export default function ApplyPage() {
                     <input 
                       type="text" 
                       name="position" 
-                      placeholder="e.g., Warehouse Associate, Production Supervisor"
+                      placeholder="e.g., Warehouse Associate, Production Supervisor, Forklift Operator"
                       className="w-full border border-slate-300 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-[#00C9A7]"
                       required 
                     />
@@ -145,7 +148,7 @@ export default function ApplyPage() {
                   <label className="block text-xs font-semibold text-slate-500 mb-2">ANYTHING ELSE YOU WANT US TO KNOW?</label>
                   <textarea 
                     name="message" 
-                    placeholder="Tell us about your experience, availability, or any specific requirements..."
+                    placeholder="Tell us about your experience, availability, preferred locations (Toronto, Mississauga, Brampton, etc.), or any specific requirements..."
                     rows={5}
                     className="w-full border border-slate-300 rounded-3xl px-5 py-4 text-sm focus:outline-none focus:border-[#00C9A7]"
                   />
@@ -203,7 +206,9 @@ export default function ApplyPage() {
         <div className="max-w-3xl mx-auto px-8">
           <div className="text-xs font-bold tracking-[2px] text-[#F0C94D]">QUESTIONS?</div>
           <h2 className="mt-4 text-5xl font-bold tracking-tighter">Not ready to apply yet?</h2>
-          <p className="mt-6 text-xl text-white/70">Feel free to contact us with any questions about opportunities.</p>
+          <p className="mt-6 text-xl text-white/70">
+            Feel free to contact us with any questions about opportunities across Ontario.
+          </p>
           
           <button 
             onClick={() => window.location.href = '/contact'}
