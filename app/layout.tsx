@@ -21,13 +21,15 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://westernjobs.ca'),
+  
   title: {
     default: "Western Jobs | Premium Staffing & Recruitment Agency | Toronto, GTA & Ontario",
     template: "%s | Western Jobs",
   },
+  
   description: "Ontario's trusted premium staffing agency. Fast temporary, permanent, and contract staffing solutions across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor, Kitchener and the GTA. Pre-vetted talent. 48-hour average fill time. 98.4% retention rate.",
   
-icons: {
+  icons: {
     icon: '/favicon.ico',
   },
 
@@ -70,51 +72,42 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        {/* Organization Schema - Best Practice */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Western Jobs",
+              "url": "https://westernjobs.ca",
+              "logo": "https://westernjobs.ca/logo.png",
+              "description": "Premium staffing and recruitment agency serving Toronto, Mississauga, Brampton, Vaughan and across Ontario.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "6660 Kennedy Rd, Suite 201",
+                "addressLocality": "Mississauga",
+                "addressRegion": "ON",
+                "postalCode": "L5T 2M9",
+                "addressCountry": "CA"
+              },
+              "telephone": "+1-647-632-6464",
+              "email": "hr@westernjobs.ca",
+              "areaServed": [
+                "Toronto", "Mississauga", "Brampton", "Vaughan", "Hamilton",
+                "London", "Windsor", "Kitchener", "Guelph", "Barrie", "Ontario"
+              ]
+            })
+          }}
+        />
+      </head>
       <body className="bg-slate-50 text-slate-800 font-sans antialiased">
         <ModalProvider>
           <Navbar />
-
-          {/* Organization Schema */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Western Jobs",
-                "url": "https://westernjobs.ca",
-                "logo": "https://westernjobs.ca/logo.png",
-                "description": "Premium staffing and recruitment agency serving Toronto, Mississauga, Brampton, Vaughan and across Ontario.",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "6660 Kennedy Rd, Suite 201",
-                  "addressLocality": "Mississauga",
-                  "addressRegion": "ON",
-                  "postalCode": "L5T 2M9",
-                  "addressCountry": "CA"
-                },
-                "telephone": "+1-647-632-6464",
-                "email": "hr@westernjobs.ca",
-                "areaServed": [
-                  "Toronto",
-                  "Mississauga",
-                  "Brampton",
-                  "Vaughan",
-                  "Hamilton",
-                  "London",
-                  "Windsor",
-                  "Kitchener",
-                  "Guelph",
-                  "Barrie",
-                  "Ontario"
-                ]
-              })
-            }}
-          />
-
           {children}
           <Footer />
-          <ContactModal />           {/* Global Contact Modal */}
+          <ContactModal />
         </ModalProvider>
       </body>
     </html>
