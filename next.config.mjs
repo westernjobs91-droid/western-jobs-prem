@@ -1,6 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: false,           // ← Add this line
+  trailingSlash: false,
+
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.westernjobs.ca',
+          },
+        ],
+        destination: 'https://westernjobs.ca/:path*',
+        permanent: true,
+      },
+    ]
+  },
 
   images: {
     remotePatterns: [
