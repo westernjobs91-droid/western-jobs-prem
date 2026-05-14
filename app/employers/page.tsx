@@ -156,8 +156,6 @@ export default function EmployersPage() {
         </div>
       </section>
 
-      // Add this section before the final CTA
-
 {/* SERVING ACROSS ONTARIO */}
 <section className="max-w-screen-2xl mx-auto px-8 py-16 border-t border-slate-100">
   <div className="text-center mb-10">

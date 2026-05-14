@@ -4,6 +4,9 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: "Staffing Agency Woodstock ON | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in Woodstock, Ontario. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across Woodstock and Southwestern Ontario.",
+alternates: {
+    canonical: "https://westernjobs.ca/woodstock",
+  },
 }
 
 export default function WoodstockPage() {

@@ -38,6 +38,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
+    url: "https://westernjobs.ca",
     title: "Western Jobs | Premium Staffing & Recruitment Agency in Ontario",
     description: "Expert temporary, permanent, and contract staffing solutions. Fast hiring support for employers and job seekers across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor and the GTA.",
     images: [
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Western Jobs | Premium Staffing Agency | Toronto & GTA",
-    description: "Fast, reliable temporary, permanent & contract staffing across Ontario. 48-hour average fill time. Trusted by employers across the GTA.",
+    description: "Fast, reliable temporary, permanent & contract staffing across Ontario. 4,800+ placements. 48-hour average fill time. Trusted by employers across the GTA.",
     images: ["/logo.png"],
   },
 

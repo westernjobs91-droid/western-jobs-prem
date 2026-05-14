@@ -4,6 +4,9 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: "Staffing Agency Hamilton | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in Hamilton. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across Hamilton and the GTA.",
+alternates: {
+    canonical: "https://westernjobs.ca/hamilton",
+  },
 }
 
 export default function HamiltonPage() {
