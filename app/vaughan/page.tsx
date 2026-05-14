@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Staffing Agency Vaughan | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in Vaughan. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across Vaughan and the GTA.",
 alternates: {
-    canonical: "https://westernjobs.ca/vaughan",
+    canonical: "https://www.westernjobs.ca/vaughan",
   },
 }
 

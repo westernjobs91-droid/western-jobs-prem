@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Staffing Agency Tilsonburg | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in Tilsonburg. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across Tilsonburg and Southwestern Ontario.",
 alternates: {
-    canonical: "https://westernjobs.ca/tilsonburg",
+    canonical: "https://www.westernjobs.ca/tilsonburg",
   },
 }
 

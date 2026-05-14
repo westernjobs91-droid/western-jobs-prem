@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Staffing Agency London ON | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in London, Ontario. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across London and Southwestern Ontario.",
 alternates: {
-    canonical: "https://westernjobs.ca/london",
+    canonical: "https://www.westernjobs.ca/london",
   },
 }
 

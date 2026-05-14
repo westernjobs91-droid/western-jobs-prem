@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Staffing Agency Alliston | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in Alliston, Ontario. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across Alliston and Simcoe County.",
 alternates: {
-    canonical: "https://westernjobs.ca/alliston",
+    canonical: "https://www.westernjobs.ca/alliston",
   },
 }
 

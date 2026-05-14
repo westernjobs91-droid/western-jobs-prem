@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: 'https://westernjobs.ca/sitemap.xml',
+    sitemap: 'https://www.westernjobs.ca/sitemap.xml',
   }
 }

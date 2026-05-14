@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Staffing Agency Mississauga | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in Mississauga. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across Mississauga and the GTA.",
 alternates: {
-    canonical: "https://westernjobs.ca/mississauga",
+    canonical: "https://www.westernjobs.ca/mississauga",
   },
 }
 

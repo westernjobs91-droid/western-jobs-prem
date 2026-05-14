@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Staffing Agency St. Thomas | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in St. Thomas, Ontario. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across St. Thomas and Southwestern Ontario.",
 alternates: {
-    canonical: "https://westernjobs.ca/st-thomas",
+    canonical: "https://www.westernjobs.ca/st-thomas",
   },
 }
 

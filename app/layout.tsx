@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://westernjobs.ca'),
+  metadataBase: new URL('https://www.westernjobs.ca'),
   
   title: {
     default: "Western Jobs | Premium Staffing & Recruitment Agency | Toronto, GTA & Ontario",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    url: "https://westernjobs.ca",
+    url: "https://www.westernjobs.ca",
     title: "Western Jobs | Premium Staffing & Recruitment Agency in Ontario",
     description: "Expert temporary, permanent, and contract staffing solutions. Fast hiring support for employers and job seekers across Toronto, Mississauga, Brampton, Vaughan, Hamilton, London, Windsor and the GTA.",
     images: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://westernjobs.ca",
+    canonical: "https://www.westernjobs.ca",
   },
 }
 
@@ -82,8 +82,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Western Jobs",
-              "url": "https://westernjobs.ca",
-              "logo": "https://westernjobs.ca/logo.png",
+              "url": "https://www.westernjobs.ca",
+              "logo": "https://www.westernjobs.ca/logo.png",
               "description": "Premium staffing and recruitment agency serving Toronto, Mississauga, Brampton, Vaughan and across Ontario.",
               "address": {
                 "@type": "PostalAddress",

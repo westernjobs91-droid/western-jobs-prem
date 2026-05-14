@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Staffing Agency Cambridge ON | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in Cambridge, Ontario. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across Cambridge and the Region of Waterloo.",
 alternates: {
-    canonical: "https://westernjobs.ca/cambridge",
+    canonical: "https://www.westernjobs.ca/cambridge",
   },
 }
 

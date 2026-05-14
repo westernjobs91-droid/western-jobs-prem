@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Staffing Agency Oshawa | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in Oshawa. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across Oshawa and the GTA.",
 alternates: {
-    canonical: "https://westernjobs.ca/oshawa",
+    canonical: "https://www.westernjobs.ca/oshawa",
   },
 }
 

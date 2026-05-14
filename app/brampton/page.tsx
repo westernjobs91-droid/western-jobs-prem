@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Staffing Agency Brampton | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in Brampton. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across Brampton and the GTA.",
 alternates: {
-    canonical: "https://westernjobs.ca/brampton",
+    canonical: "https://www.westernjobs.ca/brampton",
   },
 }
 

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Staffing Agency Ingersoll | Temporary & Permanent Staffing | Western Jobs",
   description: "Trusted staffing agency in Ingersoll. Fast temporary, permanent, and contract staffing solutions. 48-hour average fill time. Serving employers across Ingersoll and Southwestern Ontario.",
 alternates: {
-    canonical: "https://westernjobs.ca/ingersoll",
+    canonical: "https://www.westernjobs.ca/ingersoll",
   },
 }
 
