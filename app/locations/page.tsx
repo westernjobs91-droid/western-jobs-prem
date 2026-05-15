@@ -55,6 +55,7 @@ const regions = [
     name: "Central Ontario",
     cities: [
       { name: "Alliston", path: "/alliston", note: "Honda Canada" },
+      { name: "Newmarket", path: "/newmarket", note: "York Region" },
     ]
   },
 ]

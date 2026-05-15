@@ -21,6 +21,7 @@ const locations = [
     { name: "Vaughan", path: "/vaughan" },
     { name: "Markham", path: "/markham" },
     { name: "Richmond Hill", path: "/richmond-hill" },
+    { name: "Newmarket", path: "/newmarket" },
     { name: "Oshawa", path: "/oshawa" },
     { name: "Ajax", path: "/ajax" },
     { name: "Cambridge", path: "/cambridge" },
