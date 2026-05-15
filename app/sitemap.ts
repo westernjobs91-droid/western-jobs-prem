@@ -163,5 +163,87 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.6,
     },
+
+    // === Blog Index ===
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+
+    // === Blog Posts ===
+    {
+      url: `${baseUrl}/blog/how-to-reduce-hiring-costs-ontario`,
+      lastModified: new Date('2026-01-06'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/temp-to-perm-jobs-gta`,
+      lastModified: new Date('2026-02-03'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/staffing-agency-vs-recruitment-agency-ontario`,
+      lastModified: new Date('2026-03-03'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/warehouse-hiring-brampton-vaughan`,
+      lastModified: new Date('2026-04-01'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/working-with-staffing-agency-ontario-job-seeker`,
+      lastModified: new Date('2026-05-05'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/summer-staffing-ontario`,
+      lastModified: new Date('2026-06-02'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/ontario-labour-market-2025`,
+      lastModified: new Date('2026-07-01'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/best-industries-find-work-gta-2025`,
+      lastModified: new Date('2026-08-04'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/48-hour-fill-time-ontario-staffing`,
+      lastModified: new Date('2026-09-01'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/holiday-staffing-ontario-q4`,
+      lastModified: new Date('2026-10-06'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/manufacturing-staffing-ontario`,
+      lastModified: new Date('2026-11-03'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-write-job-posting-ontario`,
+      lastModified: new Date('2026-12-01'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ]
 }
