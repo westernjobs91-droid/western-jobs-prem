@@ -13,7 +13,7 @@ export default function Navbar() {
   const router = useRouter()
   const { openContact } = useModal()
 
-const locations = [
+  const locations = [
     { name: "Toronto", path: "/toronto" },
     { name: "Mississauga", path: "/mississauga" },
     { name: "Brampton", path: "/brampton" },
@@ -54,7 +54,7 @@ const locations = [
 
   return (
     <>
-      {/* TOP BAR — phone moved here */}
+      {/* TOP BAR */}
       <div className="bg-[#0A2540] text-white/90 text-xs py-2.5 hidden md:block">
         <div className="max-w-screen-2xl mx-auto px-8 flex justify-between items-center">
           <div className="flex items-center gap-x-6">
@@ -65,7 +65,6 @@ const locations = [
             <div className="text-white/50">|</div>
             <div className="font-medium">24/7 Emergency Staffing Available</div>
           </div>
-          {/* Phone on the right */}
           <a
             href="tel:2266977800"
             className="flex items-center gap-x-2 font-semibold text-white hover:text-[#00C9A7] transition-colors"
@@ -78,28 +77,28 @@ const locations = [
 
       {/* MAIN NAV */}
       <nav className="bg-white border-b border-slate-100 sticky top-0 z-50">
-        <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="flex items-center justify-between h-20">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-8">
+          <div className="flex items-center justify-between h-16 md:h-20">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-x-3 flex-shrink-0">
+            <Link href="/" className="flex items-center gap-x-2 flex-shrink-0">
               <img
                 src="/logo.png"
                 alt="Western Jobs"
-                className="h-10 md:h-12 w-auto"
+                className="h-9 md:h-11 w-auto"
               />
-              <div className="flex flex-col justify-center -mt-1.8">
-                <div className="font-bold text-xl md:text-[22px] tracking-[-0.3px] text-[#0A2540] leading-none">
+              <div className="flex flex-col justify-center">
+                <div className="font-bold text-lg md:text-[20px] tracking-[-0.3px] text-[#0A2540] leading-none">
                   Western Jobs
                 </div>
-                <div className="text-[9px] md:text-[10px] text-[#00C9A7] tracking-[2px] font-medium -mt-0.5">
+                <div className="text-[8px] md:text-[9px] text-[#00C9A7] tracking-[2px] font-medium">
                   PREMIUM STAFFING
                 </div>
               </div>
             </Link>
 
-            {/* Desktop Menu */}
-            <div className="hidden xl:flex items-center gap-x-6 text-sm font-medium">
+            {/* Desktop Menu — shows at lg (1024px+) */}
+            <div className="hidden lg:flex items-center gap-x-4 xl:gap-x-6 text-[13px] font-medium flex-1 justify-center">
               <Link href="/services" className="hover:text-[#00C9A7] transition-colors whitespace-nowrap">Services</Link>
               <Link href="/employers" className="hover:text-[#00C9A7] transition-colors whitespace-nowrap">For Employers</Link>
               <Link href="/job-seekers" className="hover:text-[#00C9A7] transition-colors whitespace-nowrap">For Job Seekers</Link>
@@ -152,7 +151,7 @@ const locations = [
                   Locations <i className="fa-solid fa-chevron-down text-xs ml-1"></i>
                 </button>
                 {locationsOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-slate-200 rounded-2xl shadow-xl py-2 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-slate-200 rounded-2xl shadow-xl py-2 z-50 max-h-96 overflow-y-auto">
                     {locations.map((loc, index) => (
                       <Link
                         key={index}
@@ -178,27 +177,30 @@ const locations = [
               <Link href="/blog" className="hover:text-[#00C9A7] transition-colors whitespace-nowrap">Blog</Link>
             </div>
 
-            {/* Right Side — no phone here */}
-            <div className="hidden lg:flex items-center gap-x-3 flex-shrink-0">
-              <form onSubmit={handleSearch} className="relative w-36 xl:w-40">
+            {/* Right Side */}
+            <div className="hidden lg:flex items-center gap-x-2 flex-shrink-0">
+              {/* Search — only on xl screens */}
+              <form onSubmit={handleSearch} className="relative w-32 hidden xl:block">
                 <input
                   type="text"
                   placeholder="Search Jobs"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full border border-slate-300 rounded-3xl pl-9 py-2 text-sm focus:outline-none focus:border-[#00C9A7]"
+                  className="w-full border border-slate-300 rounded-3xl pl-8 py-2 text-xs focus:outline-none focus:border-[#00C9A7]"
                 />
-                <span className="absolute left-3.5 top-2.5 text-slate-400 text-sm">🔍</span>
+                <span className="absolute left-3 top-2 text-slate-400 text-xs">🔍</span>
               </form>
-              <Link href="/hire-staff" className="px-6 py-2.5 bg-[#0A2540] text-white text-sm font-semibold rounded-3xl hover:bg-black transition-all whitespace-nowrap">
+
+              <Link href="/hire-staff" className="px-4 xl:px-6 py-2.5 bg-[#0A2540] text-white text-xs xl:text-sm font-semibold rounded-3xl hover:bg-black transition-all whitespace-nowrap">
                 Post a Job
               </Link>
-              <Link href="/apply" className="px-6 py-2.5 border border-slate-300 text-sm font-semibold rounded-3xl hover:bg-slate-50 transition-all whitespace-nowrap">
+              <Link href="/apply" className="px-4 xl:px-6 py-2.5 border border-slate-300 text-xs xl:text-sm font-semibold rounded-3xl hover:bg-slate-50 transition-all whitespace-nowrap">
                 Find Work
               </Link>
             </div>
 
-            <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-2xl">
+            {/* Mobile hamburger */}
+            <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-2xl p-2">
               {isOpen ? '✕' : '☰'}
             </button>
           </div>
