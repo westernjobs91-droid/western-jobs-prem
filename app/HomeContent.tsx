@@ -86,8 +86,20 @@ export default function HomeContent() {
         </div>
       </section>
 
-{/* STATS BAR — server component, Google sees real numbers */}
-      <StatsBar />
+      {/* TRUST BAR — fixed to match hero stats */}
+      <div className="bg-white border-b border-slate-100 py-6">
+        <div className="max-w-screen-2xl mx-auto px-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
+            <div className="font-semibold text-slate-700">98.4% Client Retention</div>
+            <div className="hidden md:block text-slate-300">|</div>
+            <div className="font-semibold text-slate-700">4,800+ Placements in 2025</div>
+            <div className="hidden md:block text-slate-300">|</div>
+            <div className="font-semibold text-slate-700">50+ Active Clients</div>
+            <div className="hidden md:block text-slate-300">|</div>
+            <div className="font-semibold text-slate-700">48-Hour Average Fill Time</div>
+          </div>
+        </div>
+      </div>
 
       {/* SERVICES */}
       <section id="services" className="max-w-screen-2xl mx-auto px-8 pt-20 pb-16">
@@ -170,30 +182,8 @@ export default function HomeContent() {
         </div>
       </section>
       
-
-      {/* STATS BAR — server-rendered static values, no AnimatedCounter */}
-      <div className="bg-[#0A2540] py-8">
-        <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 text-center text-white">
-            <div>
-              <div className="text-4xl font-bold text-[#00C9A7]">4,800+</div>
-              <div className="text-sm text-white/60 mt-1">Placements in 2025</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-[#00C9A7]">98.4%</div>
-              <div className="text-sm text-white/60 mt-1">Client Retention Rate</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-[#00C9A7]">9.2 days</div>
-              <div className="text-sm text-white/60 mt-1">Average Days to Hire</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-[#00C9A7]">4.98 / 5</div>
-              <div className="text-sm text-white/60 mt-1">Client Satisfaction</div>
-            </div>
-          </div>
-        </div>
-      </div>
+<StatsBar />
+      
 
       {/* FOR EMPLOYERS */}
       <section id="employers" className="max-w-screen-2xl mx-auto px-8 pt-20 pb-12">
