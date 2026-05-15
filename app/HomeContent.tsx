@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import AnimatedCounter from '@/components/AnimatedCounter'
 import { useModal } from '@/app/context/ModalContext'
 import Link from 'next/link'
 
@@ -14,15 +13,12 @@ export default function HomeContent() {
     <main>
       {/* HERO SECTION */}
       <section className="relative min-h-[92vh] flex items-center bg-[#0A2540]">
-        {/* Subtle Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540] via-[#0F2A4A] to-[#0A2540]"></div>
 
         <div className="relative max-w-screen-2xl mx-auto px-8 pt-8 pb-16">
           <div className="grid lg:grid-cols-12 gap-x-8 items-center">
             
-            {/* Left Side - Text Content */}
             <div className="lg:col-span-7 max-w-3xl">
-              {/* Badge */}
               <div className="inline-flex items-center rounded-3xl bg-white/95 px-5 py-2 text-xs font-semibold tracking-[1px] text-[#0A2540] mb-8 shadow-sm">
                 <div className="flex items-center gap-x-3">
                   <div className="flex items-center gap-x-1.5">
@@ -41,7 +37,7 @@ export default function HomeContent() {
               </h1>
               
               <p className="max-w-lg text-[21px] text-white/90 tracking-tight">
-                Ontario's most trusted premium recruitment partner. We connect ambitious employers with exceptional talent across the province.
+                Ontario&apos;s most trusted premium recruitment partner. We connect ambitious employers with exceptional talent across the province.
               </p>
               
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-10">
@@ -52,17 +48,16 @@ export default function HomeContent() {
                   <span>Hire Talent Now</span>
                   <i className="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
                 </button>
-                
-               <button 
-            onClick={() => window.location.href = '/apply'}
-            className="group flex items-center justify-center gap-x-3 px-8 py-[18px] border border-white/40 text-white hover:bg-white/10 font-semibold rounded-3xl text-base transition-all"
-          >
-            <span>Browse Open Roles</span>
-          </button>
+                <button 
+                  onClick={() => window.location.href = '/apply'}
+                  className="group flex items-center justify-center gap-x-3 px-8 py-[18px] border border-white/40 text-white hover:bg-white/10 font-semibold rounded-3xl text-base transition-all"
+                >
+                  <span>Browse Open Roles</span>
+                </button>
               </div>
             </div>
 
-            {/* Right Side - Stats Box */}
+            {/* Right Side - Stats Box — static values, no JS needed */}
             <div className="lg:col-span-5 mt-16 lg:mt-0">
               <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20">
                 <div className="grid grid-cols-2 gap-6 text-center">
@@ -90,13 +85,13 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* TRUST BAR */}
+      {/* TRUST BAR — fixed to match hero stats */}
       <div className="bg-white border-b border-slate-100 py-6">
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
             <div className="font-semibold text-slate-700">98.4% Client Retention</div>
             <div className="hidden md:block text-slate-300">|</div>
-            <div className="font-semibold text-slate-700">1,000+ Placements in 2024/25</div>
+            <div className="font-semibold text-slate-700">4,800+ Placements in 2025</div>
             <div className="hidden md:block text-slate-300">|</div>
             <div className="font-semibold text-slate-700">50+ Active Clients</div>
             <div className="hidden md:block text-slate-300">|</div>
@@ -181,30 +176,30 @@ export default function HomeContent() {
             href="/locations" 
             className="inline-flex items-center gap-x-2 text-[#00C9A7] font-semibold hover:underline"
           >
-            View all locations across Ontario →
+            View all locations across Ontario
           </Link>
         </div>
       </section>
 
-      {/* STATS BAR */}
+      {/* STATS BAR — server-rendered static values, no AnimatedCounter */}
       <div className="bg-[#0A2540] py-8">
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 text-center text-white">
             <div>
-              <AnimatedCounter end={1000} />
-              <div className="text-sm text-white/60 -mt-1">Placements in 2025</div>
+              <div className="text-4xl font-bold text-[#00C9A7]">4,800+</div>
+              <div className="text-sm text-white/60 mt-1">Placements in 2025</div>
             </div>
             <div>
-              <AnimatedCounter end={98.4} suffix="%" />
-              <div className="text-sm text-white/60 -mt-1">% Client Retention</div>
+              <div className="text-4xl font-bold text-[#00C9A7]">98.4%</div>
+              <div className="text-sm text-white/60 mt-1">Client Retention Rate</div>
             </div>
             <div>
-              <AnimatedCounter end={9.2} />
-              <div className="text-sm text-white/60 -mt-1">Average Days to Hire</div>
+              <div className="text-4xl font-bold text-[#00C9A7]">9.2 days</div>
+              <div className="text-sm text-white/60 mt-1">Average Days to Hire</div>
             </div>
             <div>
-              <AnimatedCounter end={4.98} />
-              <div className="text-sm text-white/60 -mt-1">Client Satisfaction</div>
+              <div className="text-4xl font-bold text-[#00C9A7]">4.98 / 5</div>
+              <div className="text-sm text-white/60 mt-1">Client Satisfaction</div>
             </div>
           </div>
         </div>
@@ -218,20 +213,20 @@ export default function HomeContent() {
             <h2 className="section-header mt-3 tracking-tight">Find exceptional<br />talent. Fast.</h2>
             
             <div className="mt-7 text-xl text-slate-600 max-w-lg">
-              We understand Ontario’s unique labour market. Let us help you build high-performing teams with speed and precision.
+              We understand Ontario&apos;s unique labour market. Let us help you build high-performing teams with speed and precision.
             </div>
             
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-x-3 text-slate-600">
-                <div className="text-emerald-500">✓</div>
+                <div className="text-emerald-500">&#10003;</div>
                 <span>Access to 10,000+ pre-screened candidates</span>
               </div>
               <div className="flex items-center gap-x-3 text-slate-600">
-                <div className="text-emerald-500">✓</div>
+                <div className="text-emerald-500">&#10003;</div>
                 <span>Dedicated Talent Acquisition Specialist</span>
               </div>
               <div className="flex items-center gap-x-3 text-slate-600">
-                <div className="text-emerald-500">✓</div>
+                <div className="text-emerald-500">&#10003;</div>
                 <span>Guaranteed 48-hour response</span>
               </div>
             </div>
@@ -275,18 +270,17 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* FOR CANDIDATES + FINAL CTA COMBINED */}
+      {/* FOR CANDIDATES + FINAL CTA */}
       <section className="bg-[#0A2540] py-16 text-white">
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="grid lg:grid-cols-12 gap-x-16 gap-y-12 items-center">
             
-            {/* Left Side - Job Seekers */}
             <div className="lg:col-span-7">
               <div className="uppercase tracking-[1.5px] text-xs font-bold text-[#00C9A7]">FOR JOB SEEKERS</div>
               <h2 className="section-header mt-3 tracking-tight text-white">Find work that<br />fits your life.</h2>
               
               <div className="mt-6 text-xl text-white/80 max-w-lg">
-                Whether you’re looking for flexible temporary work, contract projects, or a long-term career move, we have opportunities that match your goals.
+                Whether you are looking for flexible temporary work, contract projects, or a long-term career move, we have opportunities that match your goals.
               </div>
               
               <button 
@@ -297,28 +291,30 @@ export default function HomeContent() {
               </button>
             </div>
 
-            {/* Right Side - CTA Box */}
             <div className="lg:col-span-5 bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl">
               <div className="text-xs font-bold tracking-[1.5px] text-[#F0C94D]">READY TO EXPERIENCE PREMIUM STAFFING?</div>
               
-              <h3 className="mt-4 text-3xl font-bold leading-tight">Whether you're hiring or looking for your next role, let's talk.</h3>
+              <h3 className="mt-4 text-3xl font-bold leading-tight">Whether you are hiring or looking for your next role, let&apos;s talk.</h3>
               
               <div className="mt-8 flex flex-col gap-3">
                 <button 
                   onClick={() => window.location.href = '/hire-staff'}
                   className="w-full px-8 py-3.5 bg-white hover:bg-slate-100 text-[#0A2540] font-semibold rounded-3xl text-sm transition-all flex items-center justify-center gap-x-3"
                 >
-                  I'm Hiring Talent
+                  I am Hiring Talent
                 </button>
                 <button 
                   onClick={() => window.location.href = '/apply'}
                   className="w-full px-8 py-3.5 border border-white/40 hover:bg-white/10 text-sm font-semibold rounded-3xl transition-all flex items-center justify-center gap-x-3"
                 >
-                  I'm Looking for Work
+                  I am Looking for Work
                 </button>
               </div>
               
-              <div className="mt-6 text-center text-xs text-white/50">Or call us directly at <a href="tel:2266977800" className="font-semibold text-white hover:text-[#00C9A7]">226-697-7800</a></div>
+              <div className="mt-6 text-center text-xs text-white/50">
+                Or call us directly at{' '}
+                <a href="tel:2266977800" className="font-semibold text-white hover:text-[#00C9A7]">226-697-7800</a>
+              </div>
             </div>
           </div>
         </div>
@@ -358,15 +354,15 @@ export default function HomeContent() {
               
               <div className="space-y-3 max-h-[320px] overflow-auto pr-2">
                 {[
-                  { title: "Warehouse Associate – Afternoon Shift", location: "Mississauga", pay: "$22.50/hr", type: "Temp-to-Perm" },
+                  { title: "Warehouse Associate - Afternoon Shift", location: "Mississauga", pay: "$22.50/hr", type: "Temp-to-Perm" },
                   { title: "Production Supervisor", location: "Hamilton", pay: "$68,000", type: "Permanent" },
                   { title: "Customer Service Representative (Bilingual)", location: "Toronto", pay: "$24/hr", type: "Contract" },
-                  { title: "Forklift Operator – Night Shift", location: "London", pay: "$25.75/hr", type: "Temporary" }
+                  { title: "Forklift Operator - Night Shift", location: "London", pay: "$25.75/hr", type: "Temporary" }
                 ].map((job, index) => (
                   <div key={index} className="flex justify-between items-center border border-slate-100 hover:border-slate-200 transition-colors px-5 py-4 rounded-2xl">
                     <div>
                       <div className="font-semibold">{job.title}</div>
-                      <div className="text-xs text-slate-500">{job.location} • {job.pay} • {job.type}</div>
+                      <div className="text-xs text-slate-500">{job.location} - {job.pay} - {job.type}</div>
                     </div>
                     <button className="px-6 py-2 text-xs font-semibold bg-[#0A2540] text-white rounded-2xl">Apply</button>
                   </div>
