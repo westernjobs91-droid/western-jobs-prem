@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useModal } from '@/app/context/ModalContext'
 import Link from 'next/link'
+import StatsBar from './StatsBar'
 
 export default function HomeContent() {
   const [showJobModal, setShowJobModal] = useState(false)
@@ -85,20 +86,8 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* TRUST BAR — fixed to match hero stats */}
-      <div className="bg-white border-b border-slate-100 py-6">
-        <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
-            <div className="font-semibold text-slate-700">98.4% Client Retention</div>
-            <div className="hidden md:block text-slate-300">|</div>
-            <div className="font-semibold text-slate-700">4,800+ Placements in 2025</div>
-            <div className="hidden md:block text-slate-300">|</div>
-            <div className="font-semibold text-slate-700">50+ Active Clients</div>
-            <div className="hidden md:block text-slate-300">|</div>
-            <div className="font-semibold text-slate-700">48-Hour Average Fill Time</div>
-          </div>
-        </div>
-      </div>
+{/* STATS BAR — server component, Google sees real numbers */}
+      <StatsBar />
 
       {/* SERVICES */}
       <section id="services" className="max-w-screen-2xl mx-auto px-8 pt-20 pb-16">
@@ -180,6 +169,7 @@ export default function HomeContent() {
           </Link>
         </div>
       </section>
+      
 
       {/* STATS BAR — server-rendered static values, no AnimatedCounter */}
       <div className="bg-[#0A2540] py-8">
