@@ -250,6 +250,130 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="bg-slate-50 py-20">
+        <div className="max-w-screen-2xl mx-auto px-8">
+          <div className="text-center mb-14">
+            <div className="text-xs font-bold tracking-[2px] text-emerald-600">WHAT CLIENTS SAY</div>
+            <h2 className="section-header mt-3">Trusted by employers across Ontario</h2>
+            <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+              Here is what hiring managers and operations teams say about working with Western Jobs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "We had an urgent production ramp-up with less than 48 hours notice. Western Jobs had six pre-screened workers on our floor the next morning — all shift-ready, safety-trained, and briefed. That kind of response is rare in this industry.",
+                name: "Project Manager",
+                company: "Tier-1 Automotive Supplier, Brampton",
+                initial: "PM"
+              },
+              {
+                quote: "What sets Western Jobs apart is how well they understand our environment. Every candidate they send has already been vetted for food safety awareness and reliability. Our line managers stopped complaining about agency workers the month we switched.",
+                name: "HR Generalist",
+                company: "Food Processing Company, Mississauga",
+                initial: "HR"
+              },
+              {
+                quote: "I have worked with a lot of staffing agencies over the years. Western Jobs is the only one that actually calls to check in after placement. Our 90-day retention on their placements is significantly higher than anything we saw before.",
+                name: "Warehouse Supervisor",
+                company: "Logistics & Distribution Centre, Richmond Hill",
+                initial: "WS"
+              },
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col">
+                <div className="text-3xl text-[#00C9A7] font-serif mb-4">&ldquo;</div>
+                <p className="text-slate-600 leading-relaxed flex-1 text-lg">
+                  {testimonial.quote}
+                </p>
+                <div className="mt-8 flex items-center gap-4 pt-6 border-t border-slate-100">
+                  <div className="w-12 h-12 rounded-2xl bg-[#0A2540] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                    {testimonial.initial}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-slate-900">{testimonial.name}</div>
+                    <div className="text-sm text-slate-500 mt-0.5">{testimonial.company}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LATEST FROM THE BLOG */}
+      <section className="max-w-screen-2xl mx-auto px-8 py-20 border-t border-slate-100">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <div className="text-xs font-bold tracking-[2px] text-emerald-600">INSIGHTS & RESOURCES</div>
+            <h2 className="section-header mt-3">Latest from the blog</h2>
+          </div>
+          <Link
+            href="/blog"
+            className="text-[#00C9A7] font-semibold hover:underline text-sm flex items-center gap-2 flex-shrink-0"
+          >
+            View all articles →
+          </Link>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              slug: "how-to-reduce-hiring-costs-ontario",
+              title: "How to Reduce Hiring Costs in Ontario: A Practical Guide for GTA Businesses",
+              description: "Discover practical ways GTA businesses can lower cost per hire — and when partnering with a staffing agency saves you more.",
+              audience: "employer",
+              readTime: "6 min read",
+              date: "Jan 6, 2026"
+            },
+            {
+              slug: "temp-to-perm-jobs-gta",
+              title: "Temp-to-Perm Jobs in the GTA: What They Are and How to Land One",
+              description: "Learn how temp-to-perm jobs work in Ontario, what industries offer them, and how to turn a contract placement into a permanent career.",
+              audience: "jobseeker",
+              readTime: "5 min read",
+              date: "Feb 3, 2026"
+            },
+            {
+              slug: "warehouse-hiring-brampton-vaughan",
+              title: "How to Hire Warehouse and Logistics Workers in Brampton and Vaughan",
+              description: "Struggling to find reliable warehouse workers in Brampton or Vaughan? Learn what the GTA market looks like and how to staff faster.",
+              audience: "employer",
+              readTime: "6 min read",
+              date: "Apr 1, 2026"
+            },
+          ].map((post, index) => (
+            <Link key={index} href={`/blog/${post.slug}`} className="group">
+              <article className="bg-white border border-slate-200 rounded-3xl p-8 h-full flex flex-col hover:shadow-lg transition-all hover:-translate-y-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className={`text-xs font-bold tracking-[1px] px-3 py-1 rounded-full ${
+                    post.audience === 'employer'
+                      ? 'bg-blue-50 text-blue-700'
+                      : 'bg-emerald-50 text-emerald-700'
+                  }`}>
+                    {post.audience === 'employer' ? 'FOR EMPLOYERS' : 'FOR JOB SEEKERS'}
+                  </span>
+                  <span className="text-xs text-slate-400">{post.readTime}</span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#00C9A7] transition-colors leading-snug flex-1">
+                  {post.title}
+                </h3>
+                <p className="text-slate-500 text-sm leading-relaxed mt-2">
+                  {post.description}
+                </p>
+                <div className="mt-6 flex items-center justify-between">
+                  <span className="text-xs text-slate-400">{post.date}</span>
+                  <span className="text-sm font-semibold text-[#00C9A7] group-hover:underline">
+                    Read more →
+                  </span>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* FOR CANDIDATES + FINAL CTA */}
       <section className="bg-[#0A2540] py-16 text-white">
         <div className="max-w-screen-2xl mx-auto px-8">
