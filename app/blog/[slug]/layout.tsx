@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { getPostBySlug, getAllPosts } from '@/app/lib/blog'
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = getPostBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const post = getPostBySlug(slug)
   if (!post) return {}
   return {
     title: post.title,

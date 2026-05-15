@@ -12,6 +12,38 @@ alternates: {
 export default function WoodstockPage() {
   return (
     <main className="pt-20">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Western Jobs - Woodstock Staffing Agency",
+      "url": "https://www.westernjobs.ca/woodstock",
+      "telephone": "+1-226-697-7800",
+      "email": "info@westernjobs.ca",
+      "image": "https://www.westernjobs.ca/logo.png",
+      "description": "Trusted staffing agency in Woodstock, Ontario. Fast temporary, permanent, and contract staffing solutions for employers across Oxford County.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6660 Kennedy Rd, Suite 201",
+        "addressLocality": "Mississauga",
+        "addressRegion": "ON",
+        "postalCode": "L5T 2M9",
+        "addressCountry": "CA"
+      },
+      "areaServed": { "@type": "City", "name": "Woodstock" },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }],
+      "priceRange": "$$",
+      "sameAs": ["https://www.linkedin.com/company/western-jobs/"]
+    })
+  }}
+/>
       <section className="bg-[#0A2540] py-20 text-white">
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="max-w-4xl">
