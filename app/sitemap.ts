@@ -271,5 +271,70 @@ export default function sitemap(): MetadataRoute.Sitemap {
   changeFrequency: 'monthly',
   priority: 0.85,
 },
+
+// === Industry Pages ===
+{
+  url: `${baseUrl}/manufacturing-staffing-ontario`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.85,
+},
+{
+  url: `${baseUrl}/warehouse-staffing-ontario`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.85,
+},
+{
+  url: `${baseUrl}/administrative-staffing-ontario`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.8,
+},
+{
+  url: `${baseUrl}/logistics-staffing-ontario`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.8,
+},
+{
+  url: `${baseUrl}/finance-staffing-ontario`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.8,
+},
+
+// === New City Pages ===
+{
+  url: `${baseUrl}/markham`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.8,
+},
+{
+  url: `${baseUrl}/richmond-hill`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.8,
+},
+{
+  url: `${baseUrl}/kitchener`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.75,
+},
+{
+  url: `${baseUrl}/burlington`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.75,
+},
+{
+  url: `${baseUrl}/ajax`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.75,
+},
+
   ]
 }
